@@ -5,7 +5,43 @@
 @import 'global';
 
 
+.rates {
+  height: 100vh;
 
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 66px;
+  }
+
+  &__header-title {
+    @extend %proximanova-semibold;
+    font-size: 65px;
+    color: $color-title;
+    width: 40%;
+  }
+
+  &__header-btn-inner {
+    border-radius: 10px;
+    background-color: $bg-color;
+    padding: 5px 6px;
+  }
+
+  &__header-btn {
+    @extend %proximanova-bold;
+    font-size: 16px;
+    color: #000;
+    padding: 18px 5px;
+    width: 160px;
+  }
+
+  &__header-btn-year {
+    background-color: #10B899;
+    border-radius: 10px 0px 0px 10px;
+    color: #fff;
+  }
+}
 
 
 
