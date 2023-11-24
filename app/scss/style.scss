@@ -68,6 +68,23 @@
     flex-direction: column;
   }
 
+  &__hit {
+    background-color: #F9F5F2;
+    position: relative;
+  }
+
+  &__hit-text {
+    @extend %proximanova-semibold;
+    font-size: 28px;
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 14px;
+    background-color: #F37060;
+    position: absolute;
+    top: 10px;
+    right: 6px;
+  }
+
   &__subtitle {
     @extend %proximanova-semibold;
     font-size: 32px;
@@ -75,24 +92,21 @@
     color: $color-text;
   }
 
-  &__price-inner {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 40px;
-  }
-
   &__price {
     @extend %proximanova-bold;
     font-size: 52px;
     color: $bg-btn;
+    margin-bottom: 40px;
+  }
+
+  &__price-month {
+    display: none;
   }
 
   &__price-text {
     @extend %proximanova-regular;
     font-size: 28px;
     color: $color-text;
-    line-height: 50px;
-    margin-left: 10px;
   }
 
   &__sublist {
@@ -148,6 +162,20 @@
     padding: 17px 54px;
     border-radius: 8px;
     border: 2px solid $color-title;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: $bg-btn;
+      color: #fff;
+      border-color: transparent;
+    }
+  }
+
+  &__link-hit {
+    background-color: #006964;
+    color: #fff;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
   }
 }
 
