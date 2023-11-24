@@ -6,7 +6,7 @@
 
 
 .rates {
-  height: 100vh;
+  padding: 100px 0;
 
   &__header {
     display: flex;
@@ -34,12 +34,120 @@
     color: #000;
     padding: 18px 5px;
     width: 160px;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: #253942;
+      color: #fff;
+    }
   }
 
   &__header-btn-year {
-    background-color: #10B899;
+    background-color: $bg-btn;
     border-radius: 10px 0px 0px 10px;
     color: #fff;
+  }
+
+  &__header-btn-month {
+    border-radius: 0 10px 10px 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__item {
+    border-radius: 15px;
+    border: 1px solid #E2E2E2;
+    background-color: #FAFAFA;
+    width: 28%;
+    padding: 32px 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    @extend %proximanova-semibold;
+    font-size: 32px;
+    margin-bottom: 22px;
+    color: $color-text;
+  }
+
+  &__price-inner {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+
+  &__price {
+    @extend %proximanova-bold;
+    font-size: 52px;
+    color: $bg-btn;
+  }
+
+  &__price-text {
+    @extend %proximanova-regular;
+    font-size: 28px;
+    color: $color-text;
+    line-height: 50px;
+    margin-left: 10px;
+  }
+
+  &__sublist {
+    margin-bottom: 38px;
+  }
+
+  &__subitem {
+    @extend %proximanova-regular;
+    font-size: 20px;
+    color: $color-text;
+    padding-left: 40px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 26px;
+      height: 26px;
+    }
+
+    &-yes::before {
+      background-image: url(../images/icons/v.svg);
+    }
+
+    &-no::before {
+      background-image: url(../images/icons/x.svg);
+    }
+  }
+
+  &__link-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  &__link {
+    @extend %proximanova-semibold;
+    font-size: 24px;
+    color: $color-text;
+    text-align: center;
+    width: 244px;
+    padding: 17px 54px;
+    border-radius: 8px;
+    border: 2px solid $color-title;
   }
 }
 
