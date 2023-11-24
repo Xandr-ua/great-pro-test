@@ -42,15 +42,15 @@
     }
   }
 
-  &__header-btn-year {
-    background-color: $bg-btn;
+  &__header-btn-left {
     border-radius: 10px 0px 0px 10px;
-    color: #fff;
   }
-
-  &__header-btn-month {
+  
+  &__header-btn-right {
     border-radius: 0 10px 10px 0;
   }
+
+  
 
   &__list {
     display: flex;
@@ -180,6 +180,17 @@
 }
 
 
+.rates__header-btn-year {
+  background-color: $bg-btn;
+  border-radius: 10px 0px 0px 10px;
+  color: #fff;
+}
+
+.rates__header-btn-month {
+  background-color: $bg-btn;
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+}
 
 
 
