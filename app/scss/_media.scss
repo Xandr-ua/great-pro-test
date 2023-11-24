@@ -28,8 +28,23 @@
 
 @media (max-width: 992px) {
 
-  
-  
+  .rates__header {
+    flex-direction: column;
+  }
+
+  .rates__header-title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .rates__item {
+    width: 33%;
+    padding: 20px 10px;
+  }
+
+  .rates__link {
+    width: 100%;
+  }
 
 
 
@@ -53,8 +68,23 @@
 
 @media (max-width: 768px) {
 
+  .rates__list {
+    flex-wrap: wrap;
+  }
 
 
+  .rates__item {
+    width: 100%;
+    padding: 32px 32px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .rates__link {
+    width: 50%;
+  }
 
   
 
@@ -87,8 +117,26 @@
 
 @media (max-width: 576px) {
 
+  .rates__header-title {
+    font-size: 46px;
+  }
 
- 
+  .rates__header-btn-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rates__header-btn {
+    border-radius: 10px;
+  }
+
+  .rates__header-btn-left {
+    margin-bottom: 5px;
+  }
+
+  .rates__link {
+    width: 100%;
+  }
 
 
 
